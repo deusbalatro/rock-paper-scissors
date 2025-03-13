@@ -12,7 +12,6 @@ const option_buttons = document.querySelectorAll(".option");
 const content = document.querySelector(".content");
 const scores_div = document.querySelector(".scores");
 
-console.log(option_buttons);
 
 restart_button.setAttribute("id", "restart-button-div");
 restart_button.innerHTML = `<button>Restart</button>`;
@@ -65,15 +64,12 @@ function playGame(option){
 			computer === 'SCISSORS' && human === 'ROCK')
 		{
 			human_score++;
-			console.log(`You win! ${human} beats ${computer}`);
 			result_text.innerText=`You win! ${human} beats ${computer}`
 		}
 		else if (computer == human){
-			console.log(`Both choices are ${human}. Round tied. Scores are unaffected.`);
 			result_text.innerText = `Both choices are ${human}. Round tied. Scores are unaffected.`;
 		}
 		else{
-			console.log(`You lose! ${computer_choice} beats ${human_choice.toUpperCase()}`);
 			result_text.innerText=`You lose! ${computer_choice} beats ${human_choice.toUpperCase()}`;
 			computer_score++;
 		}
